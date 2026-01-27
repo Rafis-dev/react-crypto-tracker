@@ -31,7 +31,7 @@ export const Home = () => {
       ) : (
         <div className="crypto-container">
           {cryptoList.map((crypto, key) => {
-            return <CryptoCard />;
+            return <CryptoCard crypto={crypto} key={key} />;
           })}
         </div>
       )}
