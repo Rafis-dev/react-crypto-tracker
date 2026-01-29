@@ -129,12 +129,16 @@ body {
   padding: 0.75rem 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.051);
   color: #fff;
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+}
+
+.filter-group option {
+  background-color: #0a0c10;
 }
 
 .filter-group select:hover {
