@@ -67,7 +67,7 @@ export const Home = () => {
           <div className="search-section">
             <input
               type="text"
-              placeholder="Search crypto..."
+              placeholder="Искать монету..."
               className="search-input"
               onChange={e => setSearchQuery(e.target.value)}
               value={searchQuery}

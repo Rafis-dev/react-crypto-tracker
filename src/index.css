@@ -38,7 +38,6 @@ body {
 
 /* Header Styles */
 .header {
-  /* background: rgba(20, 20, , 1); */
   backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   padding: 2rem 0;
@@ -77,6 +76,7 @@ body {
 .search-section {
   flex: 1;
   max-width: 500px;
+  width: 100%;
 }
 
 .search-input {
@@ -632,5 +632,190 @@ body {
 
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .header-content {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .logo-section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .logo-section p {
+    font-size: 0.8rem;
+  }
+
+  .search-section {
+    max-width: 500px;
+  }
+
+  .search-input {
+    padding: 0.7rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .crypto-card {
+    padding: 1rem;
+  }
+
+  .crypto-header {
+    margin-bottom: 0.7rem;
+  }
+
+  .crypto-info {
+    gap: 0.7rem;
+  }
+
+  .crypto-info img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .crypto-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .crypto-info .symbol {
+    font-size: 0.7rem;
+  }
+
+  .crypto-info .rank {
+    padding: 0.2rem 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  .crypto-price {
+    margin: 1rem 0;
+  }
+
+  .crypto-price .price {
+    font-size: 1.5rem;
+  }
+
+  .crypto-price .change {
+    font-size: 1rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .crypto-stats {
+    gap: 0.7rem;
+    padding-top: 0.7rem;
+  }
+
+  .stat {
+    gap: 0.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 0.8rem;
+  }
+
+  .coin-detail {
+    padding: 1rem;
+  }
+
+  .coin-header {
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+
+  .coin-title {
+    gap: 1rem;
+  }
+
+  .coin-title img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .coin-title h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .coin-title .symbol {
+    font-size: 0.5rem;
+  }
+
+  .coin-header .rank {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .coin-price-section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .current-price {
+    margin-bottom: 1rem;
+  }
+
+  .current-price h2 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .change-badge {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .price-ranges {
+    gap: 1rem;
+  }
+
+  .price-range {
+    gap: 0.5rem;
+  }
+
+  .range-label {
+    font-size: 0.5rem;
+  }
+
+  .range-value {
+    font-size: 1.2rem;
+  }
+
+  .chart-section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .chart-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .stat-card .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .stat-card .stat-value {
+    font-size: 1.2rem;
   }
 }
