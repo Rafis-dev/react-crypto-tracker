@@ -79,12 +79,12 @@ export const Home = () => {
         <div className="filter-group">
           <label>Sort by:</label>
           <select value={sortBy} onChange={e => setSortBy(e.target.value)}>
-            <option value="market_cap_rank">Rank</option>
-            <option value="name">Name</option>
-            <option value="price">Price (Low to High)</option>
-            <option value="price_desc">Price (High to Low)</option>
-            <option value="change">24h Change</option>
-            <option value="market_cap">Market Cap</option>
+            <option value="market_cap_rank">Ранг</option>
+            <option value="name">Имя</option>
+            <option value="price">Цена (по возрастанию)</option>
+            <option value="price_desc">Цена (по убыванию)</option>
+            <option value="change">Суточные изменения</option>
+            <option value="market_cap">Капитализация</option>
           </select>
         </div>
 
@@ -93,13 +93,13 @@ export const Home = () => {
             className={viewMode === 'grid' ? 'active' : ''}
             onClick={() => setViewMode('grid')}
           >
-            Grid
+            Плитка
           </button>
           <button
             className={viewMode === 'list' ? 'active' : ''}
             onClick={() => setViewMode('list')}
           >
-            List
+            Список
           </button>
         </div>
       </div>
@@ -107,7 +107,7 @@ export const Home = () => {
       {isLoading ? (
         <div className="loading">
           <div className="spinner" />
-          <p>Loading crypto data...</p>
+          <p>Загружаем данные...</p>
         </div>
       ) : (
         <div className={`crypto-container ${viewMode}`}>

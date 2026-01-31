@@ -28,14 +28,14 @@ export const CryptoCard = ({ crypto }) => {
 
         <div className="crypto-stats">
           <div className="stat">
-            <span className="stat-label">Market Cap</span>
+            <span className="stat-label">Капитализация</span>
             <span className="stat-value">
               {formatMarketCap(crypto.market_cap)}
             </span>
           </div>
 
           <div className="stat">
-            <span className="stat-label">Volume</span>
+            <span className="stat-label">Объём торгов</span>
             <span className="stat-value">
               {formatMarketCap(crypto.total_volume)}
             </span>

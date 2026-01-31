@@ -60,7 +60,7 @@ export const CoinDetail = () => {
       <div className="app">
         <div className="loading">
           <div className="spinner"></div>
-          <p>Loading coin data...</p>
+          <p>Загружаем данные...</p>
         </div>
       </div>
     );
@@ -70,8 +70,8 @@ export const CoinDetail = () => {
     return (
       <div className="app">
         <div className="no-results">
-          <p>Coin not found</p>
-          <button onClick={() => navigate('/')}>Go Back</button>
+          <p>Монета не найдена</p>
+          <button onClick={() => navigate('/')}>Назад</button>
         </div>
       </div>
     );
@@ -85,11 +85,11 @@ export const CoinDetail = () => {
       <header className="header">
         <div className="header-content">
           <div className="logo-section">
-            <h1>🚀 Crypto Tracker</h1>
-            <p>Real-time cryptocurrency prices and market data</p>
+            <h1>🚀 Крипто Трекер</h1>
+            <p>Курс криптовалют и рыночные данные в реальном времени</p>
           </div>
           <button onClick={() => navigate('/')} className="back-button">
-            ← Back to List
+            ← Обратно к списку
           </button>
         </div>
       </header>
@@ -103,7 +103,7 @@ export const CoinDetail = () => {
               <p className="symbol">{coin.symbol.toUpperCase()}</p>
             </div>
           </div>
-          <span className="rank">Rank #{coin.market_data.market_cap_rank}</span>
+          <span className="rank">Ранг #{coin.market_data.market_cap_rank}</span>
         </div>
 
         <div className="coin-price-section">
@@ -120,13 +120,13 @@ export const CoinDetail = () => {
           <div>
             <div className="price-ranges">
               <div className="price-range">
-                <span className="range-label">24h High</span>
+                <span className="range-label">Суточный максимум</span>
                 <span className="range-value">
                   {formatPrice(coin.market_data.high_24h.usd)}
                 </span>
               </div>
               <div className="price-range">
-                <span className="range-label">24h Low</span>
+                <span className="range-label">Суточный минимум</span>
                 <span className="range-value">
                   {formatPrice(coin.market_data.low_24h.usd)}
                 </span>
@@ -134,7 +134,7 @@ export const CoinDetail = () => {
             </div>
           </div>
           <div className="chart-section">
-            <h3>Price Chart (7 days)</h3>
+            <h3>Диаграмма Курса (7 дней)</h3>
             <ResponsiveContainer width="100%" height={400}>
               <LineChart data={chartData}>
                 <CartesianGrid
@@ -175,27 +175,28 @@ export const CoinDetail = () => {
 
           <div className="stats-grid">
             <div className="stat-card">
-              <span className="stat-label">Market Cap</span>
+              <span className="stat-label">Капитализация</span>
               <span className="stat-value">
                 ${formatMarketCap(coin.market_data.market_cap.usd)}
               </span>
             </div>
             <div className="stat-card">
-              <span className="stat-label">Volume</span>
+              <span className="stat-label">Объем торгов</span>
               <span className="stat-value">
                 ${formatMarketCap(coin.market_data.total_volume.usd)}
               </span>
             </div>
             <div className="stat-card">
-              <span className="stat-label">Circulating Supply</span>
+              <span className="stat-label">Монет в обращении</span>
               <span className="stat-value">
                 {coin.market_data.circulating_supply?.toLocaleString() || 'N/A'}
               </span>
             </div>
             <div className="stat-card">
-              <span className="stat-label">Total Supply</span>
+              <span className="stat-label">Общее количество монет</span>
               <span className="stat-value">
-                {coin.market_data.total_supply?.toLocaleString() || 'N/A'}
+                {coin.market_data.total_supply?.toLocaleString() ||
+                  'Нет данных'}
               </span>
             </div>
           </div>
