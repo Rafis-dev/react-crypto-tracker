@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchCryptos } from '../api/coinGecko';
 import { CryptoCard } from '../components/CryptoCard';
+import { Footer } from '../components/Footer';
 
 export const Home = () => {
   const [cryptoList, setCryptoList] = useState([]);
@@ -115,6 +116,8 @@ export const Home = () => {
           })}
         </div>
       )}
+
+      <Footer />
     </div>
   );
 };
